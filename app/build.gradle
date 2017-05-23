@@ -37,6 +37,9 @@ dependencies {
     //Google
     compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
     compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+    //Fabric
     compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true;
     }
