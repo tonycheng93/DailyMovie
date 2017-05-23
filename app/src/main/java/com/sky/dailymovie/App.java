@@ -32,6 +32,6 @@ public class App extends Application {
         Fabric.with(this, new Crashlytics());
 
         long endTime = System.currentTimeMillis();
-        Timber.d("init Application cost: ",(endTime - startTime) + "ms.");
+        Timber.d("init Application cost: ", (endTime - startTime) + " ms.");
     }
 }
