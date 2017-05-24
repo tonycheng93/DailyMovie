@@ -1,5 +1,13 @@
 package com.sky.dailymovie.data.model;
 
+import com.google.auto.value.AutoValue;
+import com.google.gson.Gson;
+import com.google.gson.TypeAdapter;
+
+import android.os.Parcelable;
+
+import java.util.List;
+
 /**
  * 项目名称：DailyMovie
  * 类描述：
@@ -10,6 +18,27 @@ package com.sky.dailymovie.data.model;
  * 修改时间：
  * 修改备注：
  */
+@AutoValue
+public abstract class DailyMovie implements Parcelable{
 
-public class DailyMovie {
+    public abstract List<IssueList> issueList();
+
+    public abstract String nextPageUrl();
+
+    public static TypeAdapter<DailyMovie> typeAdapter(Gson gson) {
+        return new AutoValue_DailyMovie.GsonTypeAdapter(gson);
+    }
+
+    public static Builder builder() {
+        return new AutoValue_DailyMovie.Builder();
+    }
+
+    @AutoValue.Builder
+    public abstract static class Builder {
+        public abstract Builder issueList(List<IssueList> issueList);
+
+        public abstract Builder nextPageUrl(String nextPageUrl);
+
+        public abstract DailyMovie build();
+    }
 }

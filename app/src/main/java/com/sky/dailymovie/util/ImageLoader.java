@@ -33,6 +33,7 @@ public class ImageLoader {
     public static void display(Context context, String url, ImageView imageView) {
         Glide.with(context)
                 .load(url)
+                .thumbnail(0.1f)
                 .into(imageView);
     }
 
