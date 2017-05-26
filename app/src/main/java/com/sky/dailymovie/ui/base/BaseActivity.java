@@ -1,4 +1,4 @@
-package com.sky.dailymovie.ui;
+package com.sky.dailymovie.ui.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

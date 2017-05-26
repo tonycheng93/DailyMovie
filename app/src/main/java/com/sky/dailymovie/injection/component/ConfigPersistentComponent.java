@@ -2,7 +2,7 @@ package com.sky.dailymovie.injection.component;
 
 import com.sky.dailymovie.injection.ConfigPersistent;
 import com.sky.dailymovie.injection.module.ActivityModule;
-import com.sky.dailymovie.ui.BaseActivity;
+import com.sky.dailymovie.ui.base.BaseActivity;
 
 import dagger.Component;
 

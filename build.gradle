@@ -45,6 +45,7 @@ ext{
     daggerVersion = '2.5'
     butterknifeVersion = '8.4.0'
     timberVersion = '4.5.1'
+    coordinatortablayoutVersion = '1.0.6'
 }
 
 task clean(type: Delete) {
