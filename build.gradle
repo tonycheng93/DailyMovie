@@ -46,6 +46,8 @@ ext{
     butterknifeVersion = '8.4.0'
     timberVersion = '4.5.1'
     coordinatortablayoutVersion = '1.0.6'
+    mockitoVersion = '2.8.9'
+    junitVesrion = '4.12'
 }
 
 task clean(type: Delete) {
