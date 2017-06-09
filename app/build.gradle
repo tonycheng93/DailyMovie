@@ -53,8 +53,8 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:support-v4:25.3.1'
-
     //test
     testCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
     testCompile "junit:junit:$rootProject.ext.junitVesrion"
+    compile project(':network')
 }
