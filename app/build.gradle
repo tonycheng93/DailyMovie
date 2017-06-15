@@ -25,22 +25,10 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    //Rx
-    compile "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjava2Version"
-    compile "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
-    //Square
-    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit2Version"
     //Google
-    compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
     compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
     compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
-    provided "com.google.auto.value:auto-value:$rootProject.ext.autoValueVersion"
-    annotationProcessor "com.google.auto.value:auto-value:$rootProject.ext.autoValueVersion"
-    //Rharter
-    annotationProcessor "com.ryanharter.auto.value:auto-value-gson:$rootProject.ext.autoValueGsonVersion"
-    provided "com.ryanharter.auto.value:auto-value-gson:$rootProject.ext.autoValueGsonVersion"
-    annotationProcessor "com.ryanharter.auto.value:auto-value-parcel:$rootProject.ext.autoValueParcelVersion"
     //Fabric
     compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true;
@@ -48,7 +36,6 @@ dependencies {
     //JakeWharton
     compile "com.jakewharton.timber:timber:$rootProject.ext.timberVersion"
     //Github
-    compile "cn.hugeterry.coordinatortablayout:coordinatortablayout:$rootProject.ext.coordinatortablayoutVersion"
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile 'com.android.support:design:25.3.1'
@@ -57,4 +44,5 @@ dependencies {
     testCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
     testCompile "junit:junit:$rootProject.ext.junitVesrion"
     compile project(':network')
+    compile project(':videoplayer')
 }

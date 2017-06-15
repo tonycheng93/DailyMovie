@@ -28,4 +28,22 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
+
+    //Rx
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjava2Version"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
+    //Square
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit2Version"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.converterGsonVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingInterceptorVersion"
+    //jakewharton
+    compile "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$rootProject.adapterRxjavaVersion"
+    //gson
+    compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    //autovalue
+    provided "com.google.auto.value:auto-value:$rootProject.ext.autoValueVersion"
+    annotationProcessor "com.google.auto.value:auto-value:$rootProject.ext.autoValueVersion"
+    annotationProcessor "com.ryanharter.auto.value:auto-value-gson:$rootProject.ext.autoValueGsonVersion"
+    provided "com.ryanharter.auto.value:auto-value-gson:$rootProject.ext.autoValueGsonVersion"
+    annotationProcessor "com.ryanharter.auto.value:auto-value-parcel:$rootProject.ext.autoValueParcelVersion"
 }
