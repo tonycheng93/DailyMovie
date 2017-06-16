@@ -27,6 +27,7 @@ dependencies {
     })
     //Google
     compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.ext.glideVersion"
     compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
     //Fabric
@@ -40,9 +41,10 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:support-v4:25.3.1'
+    //GSYVideoPlayer
+    compile "com.shuyu:GSYVideoPlayer:$rootProject.ext.gsyvideoplayerVersion"
     //test
     testCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
     testCompile "junit:junit:$rootProject.ext.junitVesrion"
     compile project(':network')
-    compile project(':videoplayer')
 }

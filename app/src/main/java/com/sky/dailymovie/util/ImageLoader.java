@@ -34,7 +34,7 @@ import com.bumptech.glide.request.RequestOptions;
 public class ImageLoader {
 
     private static final RequestOptions mOptions = new RequestOptions()
-            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
             .centerCrop();
 
     /**
