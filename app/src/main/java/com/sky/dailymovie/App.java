@@ -7,8 +7,6 @@ import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
 import timber.log.Timber;
 
-import static java.lang.System.currentTimeMillis;
-
 /**
  * 项目名称：DailyMovie
  * 类描述：
@@ -24,8 +22,8 @@ public class App extends Application {
 
     @Override
     public void onCreate() {
-        long startTime = currentTimeMillis();
         super.onCreate();
+        long startTime = System.currentTimeMillis();
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }

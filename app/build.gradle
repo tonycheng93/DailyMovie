@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
+apply from: '../config/quality/quality.gradle'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion

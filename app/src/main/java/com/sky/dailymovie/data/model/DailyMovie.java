@@ -1,8 +1,8 @@
 package com.sky.dailymovie.data.model;
 
-import com.google.auto.value.AutoValue;
-
 import android.os.Parcelable;
+
+import com.google.auto.value.AutoValue;
 
 /**
  * 项目名称：DailyMovie
