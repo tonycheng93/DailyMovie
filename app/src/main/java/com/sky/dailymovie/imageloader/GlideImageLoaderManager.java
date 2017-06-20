@@ -29,12 +29,12 @@ public class GlideImageLoaderManager implements IImageLoaderManager {
     private GlideImageLoaderManager() {
     }
 
-    private static class Holder {
-        private static GlideImageLoaderManager sInstance = new GlideImageLoaderManager();
+    private static class SingletonHolder {
+        private static final GlideImageLoaderManager sInstance = new GlideImageLoaderManager();
     }
 
     public static GlideImageLoaderManager getInstance() {
-        return Holder.sInstance;
+        return SingletonHolder.sInstance;
     }
 
     private static final RequestOptions mOptions = new RequestOptions()

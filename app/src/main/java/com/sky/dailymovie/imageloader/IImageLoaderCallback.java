@@ -1,7 +1,5 @@
 package com.sky.dailymovie.imageloader;
 
-import android.graphics.drawable.Drawable;
-
 /**
  * 项目名称：DailyMovie
  * 类描述：
@@ -17,5 +15,5 @@ public interface IImageLoaderCallback<T> {
 
     boolean onFail(Throwable throwable);
 
-    boolean onReady(Drawable drawable);
+    boolean onReady(T drawable);
 }
