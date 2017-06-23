@@ -27,8 +27,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //Google
-    compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
-    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.ext.glideVersion"
     compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
     //Fabric

@@ -1,4 +1,4 @@
-package com.sky.dailymovie.imageloader;
+package com.sky.imageloader;
 
 /**
  * 项目名称：DailyMovie
@@ -13,7 +13,7 @@ package com.sky.dailymovie.imageloader;
 
 public interface IImageLoaderCallback<T> {
 
-    boolean onFail(Throwable throwable);
+    void onFail(Throwable throwable);
 
-    boolean onReady(T drawable);
+    void onReady(T drawable);
 }

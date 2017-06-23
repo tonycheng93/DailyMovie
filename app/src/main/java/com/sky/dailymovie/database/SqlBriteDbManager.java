@@ -34,17 +34,17 @@ public class SqlBriteDbManager implements IDbManager {
 
     @Override
     public long insert(@NonNull String table, @NonNull ContentValues values) {
-        return 0;
+        return mDb.insert(table, values);
     }
 
     @Override
     public int delete(@NonNull String table, @Nullable String whereClause, @Nullable String... whereArgs) {
-        return 0;
+        return mDb.delete(table, whereClause, whereArgs);
     }
 
     @Override
     public int update(@NonNull String table, @NonNull ContentValues values, @Nullable String whereClause, @Nullable String... whereArgs) {
-        return 0;
+        return mDb.update(table, values, whereClause, whereArgs);
     }
 
     @Override

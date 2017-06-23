@@ -1,4 +1,4 @@
-package com.sky.dailymovie.imageloader;
+package com.sky.imageloader;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -15,10 +15,10 @@ import android.widget.ImageView;
  * 修改备注：
  */
 
-public interface IImageLoaderManager {
+public interface IImageLoader {
 
     /**
-     * 基本用法，只是用来加载简单图片，不做其他处理
+     * 最基本用法，只是用来简单加载图片，不做其他处理
      *
      * @param context   上下文
      * @param url       图片地址
@@ -27,12 +27,12 @@ public interface IImageLoaderManager {
     void display(Context context, String url, ImageView imageView);
 
     /**
-     * 需要加载回调
+     * 带有加载回调方法
      *
-     * @param context         上下文
-     * @param url             图片地址
-     * @param callback 加载回调
-     * @param imageView       {@link ImageView}
+     * @param context   上下文
+     * @param url       图片地址
+     * @param callback  加载回调 {@link IImageLoaderCallback}
+     * @param imageView {@link ImageView}
      */
     void display(Context context, String url,
                  IImageLoaderCallback<Drawable> callback, ImageView imageView);
