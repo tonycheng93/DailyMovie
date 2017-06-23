@@ -1,6 +1,7 @@
 package com.sky.dailymovie;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.crashlytics.android.Crashlytics;
 
@@ -20,6 +21,17 @@ import timber.log.Timber;
 
 public class App extends Application {
 
+    private App() {
+    }
+
+    private static class SingletonHolder {
+        private static final App INSTANCE = new App();
+    }
+
+    public static App getInstance() {
+        return SingletonHolder.INSTANCE;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -31,5 +43,9 @@ public class App extends Application {
 
         long endTime = System.currentTimeMillis();
         Timber.d("init Application cost: ", (endTime - startTime) + " ms.");
+    }
+
+    public Context getContext() {
+        return getApplicationContext();
     }
 }
