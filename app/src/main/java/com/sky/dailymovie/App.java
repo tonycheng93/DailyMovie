@@ -21,9 +21,6 @@ import timber.log.Timber;
 
 public class App extends Application {
 
-    private App() {
-    }
-
     private static class SingletonHolder {
         private static final App INSTANCE = new App();
     }

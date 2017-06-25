@@ -1,13 +1,10 @@
 package com.sky.dailymovie.data.model;
 
-import com.google.auto.value.AutoValue;
-
 import android.os.Parcelable;
 
 /**
  * Created by tonycheng on 2017/5/24.
  */
-@AutoValue
 public abstract class ItemList implements Parcelable {
 
 //    public abstract String type();

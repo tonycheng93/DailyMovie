@@ -19,6 +19,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
 }
 
 dependencies {
@@ -35,6 +39,8 @@ dependencies {
     }
     //JakeWharton
     compile "com.jakewharton.timber:timber:$rootProject.ext.timberVersion"
+    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
     //Square
     compile "com.squareup.sqlbrite:sqlbrite:$rootProject.ext.sqlbriteVersion"
     compile 'com.android.support:appcompat-v7:25.3.1'
@@ -47,4 +53,6 @@ dependencies {
     testCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
     testCompile "junit:junit:$rootProject.ext.junitVesrion"
     compile project(':network')
+    compile project(':imageloader')
+    compile project(':magicindicator')
 }

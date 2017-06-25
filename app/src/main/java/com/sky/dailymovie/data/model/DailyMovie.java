@@ -2,8 +2,6 @@ package com.sky.dailymovie.data.model;
 
 import android.os.Parcelable;
 
-import com.google.auto.value.AutoValue;
-
 /**
  * 项目名称：DailyMovie
  * 类描述：
@@ -14,7 +12,6 @@ import com.google.auto.value.AutoValue;
  * 修改时间：
  * 修改备注：
  */
-@AutoValue
 public abstract class DailyMovie implements Parcelable {
 
 //    public abstract List<IssueList> issueList();

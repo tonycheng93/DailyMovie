@@ -1,1 +1,1 @@
-include ':app', ':network', ':imageloader'
+include ':app', ':network', ':imageloader',':magicindicator'

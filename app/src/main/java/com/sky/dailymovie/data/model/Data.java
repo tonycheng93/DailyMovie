@@ -1,7 +1,5 @@
 package com.sky.dailymovie.data.model;
 
-import com.google.auto.value.AutoValue;
-
 import android.os.Parcelable;
 
 /**
@@ -14,6 +12,5 @@ import android.os.Parcelable;
  * 修改时间：
  * 修改备注：
  */
-@AutoValue
 public abstract class Data implements Parcelable {
 }

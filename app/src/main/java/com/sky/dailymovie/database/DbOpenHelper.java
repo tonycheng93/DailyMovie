@@ -5,6 +5,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import timber.log.Timber;
+
 /**
  * Created by tonycheng on 2017/6/21.
  */
@@ -25,7 +27,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
             db.execSQL("");
             db.setTransactionSuccessful();
         } catch (SQLException e) {
-            e.printStackTrace();
+            Timber.d(e);
         }
         db.endTransaction();
     }
