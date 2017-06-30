@@ -49,6 +49,7 @@ ext{
     mockitoVersion = '2.8.9'
     junitVesrion = '4.12'
     gsyvideoplayerVersion = '1.6.6'
+    leakcanaryVersion = '1.5.1'
 }
 
 task clean(type: Delete) {

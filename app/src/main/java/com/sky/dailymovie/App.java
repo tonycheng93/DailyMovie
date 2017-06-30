@@ -1,9 +1,12 @@
 package com.sky.dailymovie;
 
+import com.google.common.util.concurrent.FakeTimeLimiter;
+
 import android.app.Application;
 import android.content.Context;
 
 import com.crashlytics.android.Crashlytics;
+import com.squareup.leakcanary.LeakCanary;
 
 import io.fabric.sdk.android.Fabric;
 import timber.log.Timber;
@@ -21,6 +24,8 @@ import timber.log.Timber;
 
 public class App extends Application {
 
+    private static final String TAG = "App";
+
     private static class SingletonHolder {
         private static final App INSTANCE = new App();
     }
@@ -33,10 +38,18 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         long startTime = System.currentTimeMillis();
+        Timber.tag(TAG);
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
         Fabric.with(this, new Crashlytics());
+
+        if (LeakCanary.isInAnalyzerProcess(this)){
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(this);
 
         long endTime = System.currentTimeMillis();
         Timber.d("init Application cost: ", (endTime - startTime) + " ms.");
