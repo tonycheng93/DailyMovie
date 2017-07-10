@@ -2,6 +2,7 @@ package com.sky.imageloader;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.IdRes;
 import android.widget.ImageView;
 
 /**
@@ -36,4 +37,13 @@ public interface IImageLoader {
      */
     void display(Context context, String url,
                  IImageLoaderCallback<Drawable> callback, ImageView imageView);
+
+    /**
+     * 加载本地资源图片
+     *
+     * @param context   {@link Context}
+     * @param resId     资源ID
+     * @param imageView {@link ImageView}
+     */
+    void display(Context context, @IdRes int resId, ImageView imageView);
 }

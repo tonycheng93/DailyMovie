@@ -2,6 +2,7 @@ package com.sky.imageloader;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.IdRes;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -47,6 +48,11 @@ public class GlideImageLoader implements IImageLoader {
 
     @Override
     public void display(Context context, String url, IImageLoaderCallback<Drawable> callback, ImageView imageView) {
+
+    }
+
+    @Override
+    public void display(Context context, @IdRes int resId, ImageView imageView) {
 
     }
 }

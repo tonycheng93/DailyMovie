@@ -43,8 +43,10 @@ public abstract class HttpMethod<T> {
     @NonNull
     public abstract String getBaseUrl();//设置基地址，具体实现类可以设置自己的BaseUrl
 
-    @NonNull
-    public abstract int getTimeOut();//设置超时时间，具体实现类可以设置自己的超时时间
+    @Nullable
+    public int getTimeOut() {//设置超时时间，具体实现类可以设置自己的超时时间
+        return 10;
+    }
 
     @NonNull
     public abstract Class<T> getServiceClazz();//设置Retrofit需要的Service
@@ -75,6 +77,7 @@ public abstract class HttpMethod<T> {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(getConverterFactory() == null ? GsonConverterFactory.create() : getConverterFactory())
                 .build();
+        mService = retrofit.create(getServiceClazz());
     }
 
     /**

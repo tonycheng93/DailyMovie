@@ -1,5 +1,12 @@
 package com.sky.dailymovie.data.remote;
 
+import com.sky.dailymovie.data.model.Category;
+
+import java.util.List;
+
+import io.reactivex.Observable;
+import retrofit2.http.GET;
+
 /**
  * 项目名称：DailyMovie
  * 类描述：
@@ -12,4 +19,10 @@ package com.sky.dailymovie.data.remote;
  */
 
 public interface DailyMovieService {
+
+    /**
+     * 获取视频分类
+     */
+    @GET("v2/categories")
+    Observable<List<Category>> getCategorise();
 }
