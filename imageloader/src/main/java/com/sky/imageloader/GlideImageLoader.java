@@ -2,6 +2,7 @@ package com.sky.imageloader;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.IdRes;
 import android.widget.ImageView;
 
@@ -52,7 +53,7 @@ public class GlideImageLoader implements IImageLoader {
     }
 
     @Override
-    public void display(Context context, @IdRes int resId, ImageView imageView) {
+    public void display(Context context, @DrawableRes int resId, ImageView imageView) {
 
     }
 }

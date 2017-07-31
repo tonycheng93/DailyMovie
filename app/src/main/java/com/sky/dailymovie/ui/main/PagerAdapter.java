@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 项目名称：DailyMovie
@@ -19,9 +20,9 @@ import java.util.ArrayList;
 
 public class PagerAdapter extends FragmentPagerAdapter {
     private ArrayList<Fragment> mFragments = new ArrayList<>();
-    private String[] mTitles;
+    private List<String> mTitles;
 
-    public PagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments, String[] titles) {
+    public PagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments, List<String> titles) {
         super(fm);
         mFragments = fragments;
         mTitles = titles;
@@ -39,6 +40,6 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return mTitles[position];
+        return mTitles.get(position);
     }
 }
