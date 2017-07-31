@@ -1,9 +1,14 @@
 package com.sky.dailymovie.data;
 
 import com.sky.dailymovie.data.local.PreferencesHelper;
+import com.sky.dailymovie.data.model.Category;
+
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+
+import io.reactivex.Observable;
 
 /**
  * 项目名称：DailyMovie
@@ -23,5 +28,12 @@ public class DataManager {
     @Inject
     public DataManager(PreferencesHelper preferencesHelper) {
         this.mPreferencesHelper = preferencesHelper;
+    }
+
+    /**
+     * 从数据库中获取分类列表数据
+     */
+    public Observable<List<Category>> getCategories() {
+        return null;
     }
 }
